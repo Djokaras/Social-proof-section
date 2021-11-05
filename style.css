@@ -1,0 +1,219 @@
+/* 
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Very Dark Magenta: hsl(300, 43%, 22%)
+Soft Pink: hsl(333, 80%, 67%)
+
+### Neutral
+
+Dark Grayish Magenta: hsl(303, 10%, 53%)
+Light Grayish Magenta: hsl(300, 24%, 96%)
+White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Spartan](https://fonts.google.com/specimen/Spartan)
+- Weights: 400, 500, 700 */
+
+/* Variables */
+
+:root {
+	/* colors */
+	--main-white: hsl(0, 0%, 100%);
+	--dark-gray-reviews: hsl(303, 10%, 53%);
+	--very-dark-magenta: hsl(300, 43%, 22%);
+	--light-gray-magenta: hsl(300, 24%, 96%);
+	--soft-ping: hsl(333, 80%, 67%);
+}
+
+/* CSS Reset */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	text-decoration: none;
+	background: transparent;
+}
+
+/* //////////////////////////////// */
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Spartan', sans-serif;
+	background-image: url(images/bg-pattern-bottom-desktop.svg);
+}
+
+.attribution {
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: auto;
+	/* padding: 8rem 12rem; */
+	height: 80vh;
+	width: 80%;
+}
+
+.main {
+	display: grid;
+	grid-template-columns: minmax(20rem, 31rem) 1fr;
+	background-image: url(images/bg-pattern-top-desktop.svg);
+	box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.2);
+	padding: 6rem 10rem;
+	row-gap: 4.2rem;
+	column-gap: 16rem;
+}
+
+/*//////////////////////////// HEADING////////////////////////////////////// */
+
+.header-primary {
+	font-size: 3.2rem;
+	font-weight: 700;
+	color: var(--very-dark-magenta);
+	margin-bottom: 1.4rem;
+}
+
+.heading-text {
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--dark-gray-reviews);
+}
+
+/*//////////////////////////// RATINGS ////////////////////////////////////// */
+
+.ratings-review {
+	font-size: 1rem;
+	font-weight: 700;
+	color: var(--very-dark-magenta);
+	background-color: var(--light-gray-magenta);
+	border-radius: 6px;
+	padding: 1rem 2.4rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ratings-list {
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 1.2rem;
+	align-items: space-around;
+}
+
+.ratings-review--1st {
+	margin-right: 8rem;
+}
+
+.ratings-review--2nd {
+	margin-right: 4rem;
+	margin-left: 4rem;
+}
+
+.ratings-review--3rd {
+	margin-left: 8rem;
+}
+
+svg {
+	margin-right: 1rem;
+}
+
+/*//////////////////////////// REVIEWS ////////////////////////////////////// */
+
+.review-cards {
+	grid-column: 1/-1;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 2.4rem;
+}
+
+.review-card {
+	background-color: var(--very-dark-magenta);
+	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+	padding: 3rem 3rem;
+}
+
+.review-card:nth-child(1) {
+	margin-bottom: 2rem;
+}
+
+.review-card:nth-child(2) {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.review-card:nth-child(3) {
+	margin-top: 2rem;
+}
+
+.card-top {
+	display: flex;
+	align-items: center;
+	gap: 1.2rem;
+	margin-bottom: 1.4rem;
+}
+
+.card-img {
+	border-radius: 50%;
+	width: 15%;
+}
+.card-name {
+	font-size: 1rem;
+	font-weight: 700;
+	color: var(--main-white);
+}
+
+.card-buyer {
+	font-size: 1rem;
+	font-weight: 400;
+	color: var(--soft-ping);
+}
+
+.card-text {
+	font-size: 1rem;
+	line-height: 1.6;
+	color: var(--main-white);
+}
