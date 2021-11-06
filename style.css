@@ -40,7 +40,7 @@ White: hsl(0, 0%, 100%)
 	--dark-gray-reviews: hsl(303, 10%, 53%);
 	--very-dark-magenta: hsl(300, 43%, 22%);
 	--light-gray-magenta: hsl(300, 24%, 96%);
-	--soft-ping: hsl(333, 80%, 67%);
+	--soft-pink: hsl(333, 80%, 67%);
 }
 
 /* CSS Reset */
@@ -74,48 +74,50 @@ html {
 
 body {
 	font-family: 'Spartan', sans-serif;
+	/* background-color: black; */
 	background-image: url(images/bg-pattern-bottom-desktop.svg);
 }
 
 .attribution {
 	position: absolute;
-	top: 70%;
+	top: 85%;
 	left: 50%;
 	transform: translate(-50%);
 }
 
 .container {
+	background-image: url(images/bg-pattern-top-desktop.svg);
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	margin: auto;
 	/* padding: 8rem 12rem; */
-	height: 80vh;
-	width: 80%;
+	width: 75%;
 }
 
 .main {
 	display: grid;
-	grid-template-columns: minmax(20rem, 31rem) 1fr;
-	background-image: url(images/bg-pattern-top-desktop.svg);
+	grid-template-columns: minmax(20rem, 46rem) 1fr;
 	box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.2);
-	padding: 6rem 10rem;
-	row-gap: 4.2rem;
+	padding: 10rem 15rem;
+	row-gap: 6.4rem;
 	column-gap: 16rem;
 }
 
 /*//////////////////////////// HEADING////////////////////////////////////// */
 
 .header-primary {
-	font-size: 3.2rem;
+	font-size: 4.7rem;
+	line-height: 1.1;
 	font-weight: 700;
 	color: var(--very-dark-magenta);
 	margin-bottom: 1.4rem;
 }
 
 .heading-text {
-	font-size: 1rem;
+	font-size: 1.5rem;
+	line-height: 1.5;
 	font-weight: 500;
 	color: var(--dark-gray-reviews);
 }
@@ -123,16 +125,15 @@ body {
 /*//////////////////////////// RATINGS ////////////////////////////////////// */
 
 .ratings-review {
-	font-size: 1rem;
+	font-size: 1.4rem;
 	font-weight: 700;
 	color: var(--very-dark-magenta);
 	background-color: var(--light-gray-magenta);
 	border-radius: 6px;
-	padding: 1rem 2.4rem;
+	padding: 0 1.6rem;
 
 	display: flex;
 	align-items: center;
-	justify-content: center;
 }
 
 .ratings-list {
@@ -165,7 +166,7 @@ svg {
 	grid-column: 1/-1;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	gap: 2.4rem;
+	gap: 3.2rem;
 }
 
 .review-card {
@@ -173,7 +174,7 @@ svg {
 	border-radius: 6px;
 	display: flex;
 	flex-direction: column;
-	padding: 3rem 3rem;
+	padding: 4.5rem 3.5em;
 }
 
 .review-card:nth-child(1) {
@@ -192,28 +193,29 @@ svg {
 .card-top {
 	display: flex;
 	align-items: center;
-	gap: 1.2rem;
-	margin-bottom: 1.4rem;
+	gap: 2.4rem;
+	margin-bottom: 2rem;
 }
 
 .card-img {
 	border-radius: 50%;
-	width: 15%;
+	width: 14%;
 }
 .card-name {
-	font-size: 1rem;
+	font-size: 1.3rem;
 	font-weight: 700;
 	color: var(--main-white);
+	margin-bottom: 0.5rem;
 }
 
 .card-buyer {
-	font-size: 1rem;
+	font-size: 1.3rem;
 	font-weight: 400;
-	color: var(--soft-ping);
+	color: var(--soft-pink);
 }
 
 .card-text {
-	font-size: 1rem;
-	line-height: 1.6;
+	font-size: 1.3rem;
+	line-height: 1.7;
 	color: var(--main-white);
 }
